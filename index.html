@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellas | Future Developers - Izrada Web Stranica</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- TEMA I BOJE --- */
+        :root {
+            --bg-deep: #0a192f;
+            --bg-light: #112240;
+            --accent: #64ffda;
+            --white: #e6f1ff;
+            --grey: #8892b0;
+            --transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGACIJA --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: rgba(10, 25, 47, 0.85);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            text-shadow: 0 0 15px var(--accent);
+            transform: scale(1.05);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li { margin-left: 30px; }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover::after { width: 100%; }
+        nav ul li a:hover { color: var(--accent); }
+
+        /* --- HERO SEKCIJA --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            color: var(--accent);
+            font-family: monospace;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .highlight { color: var(--accent); }
+
+        .hero p {
+            max-width: 600px;
+            color: var(--grey);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .cta-btn {
+            padding: 18px 35px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: var(--transition);
+            display: inline-block;
+        }
+
+        .cta-btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px -10px var(--accent);
+        }
+
+        /* --- PROCES RADA --- */
+        .process-section {
+            padding: 120px 10%;
+            text-align: center;
+        }
+
+        .process-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            padding: 40px 25px;
+            background: var(--bg-light);
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .step:hover {
+            transform: translateY(-12px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.5);
+        }
+
+        .step h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* --- PORTFOLIO --- */
+        .portfolio-section {
+            padding: 120px 10%;
+            text-align: center;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .project-card {
+            background: var(--bg-light);
+            height: 300px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--accent);
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card span {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: var(--grey);
+            font-size: 0.9rem;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+        }
+
+        /* --- TIM SEKCIJA --- */
+        .team-section {
+            padding: 120px 10%;
+            text-align: center;
+            background-color: var(--bg-light);
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+
+        .member {
+            width: 280px;
+            transition: var(--transition);
+        }
+
+        .member:hover { transform: translateY(-10px); }
+
+        .portrait {
+            width: 220px;
+            height: 220px;
+            border-radius: 12px;
+            border: 2px solid var(--accent);
+            margin: 0 auto 25px;
+            overflow: hidden;
+            background-color: var(--bg-deep);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .member:hover .portrait {
+            box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
+            transform: rotate(2deg);
+        }
+
+        .portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .member:hover img { 
+            transform: scale(1.1);
+        }
+
+        .no-img-text {
+            color: var(--grey);
+            font-size: 0.8rem;
+            font-family: monospace;
+            padding: 20px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+            color: var(--grey);
+        }
+
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        /* Responsivnost */
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .portfolio-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#pocetna" class="logo">WELLAS</a>
+        <ul>
+            <li><a href="#pocetna">Početna</a></li>
+            <li><a href="#radovi">Radovi</a></li>
+            <li><a href="o-nama.html">O nama</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="pocetna">
+        <h2 data-aos="fade-down">Mi smo</h2>
+        <h1 data-aos="fade-up" data-aos-delay="100"><span class="highlight">Wellas</span></h1>
+        <h1 data-aos="fade-up" data-aos-delay="200">Future Developers.</h1>
+        <p data-aos="fade-up" data-aos-delay="300">Specijalizovani za kreiranje vrhunskih web rješenja koja pomažu vašem biznisu da raste u digitalnom svijetu.</p>
+        <a href="#radovi" class="cta-btn" data-aos="zoom-in" data-aos-delay="400">Pogledaj radove</a>
+    </section>
+
+    <section class="process-section">
+        <h2 style="font-size: 2.5rem;" data-aos="fade-right">Kako radimo</h2>
+        <div class="process-grid">
+            <div class="step" data-aos="fade-up" data-aos-delay="100">
+                <h4>01. Planiranje</h4>
+                <p style="color: var(--grey);">Definišemo ciljeve i strukturu vaše nove stranice kroz detaljne konsultacije.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+                <h4>02. Razvoj</h4>
+                <p style="color: var(--grey);">Pretvaramo ideje u čist, optimizovan i brz kod koristeći najnovije tehnologije.</p>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="300">
+                <h4>03. Lansiranje</h4>
+                <p style="color: var(--grey);">Vaša stranica ide uživo, spremna da privuče prve posjetioce i klijente.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section" id="radovi">
+        <h2 style="font-size: 2.5rem;" data-aos="fade-down">Naši Radovi</h2>
+        <div class="portfolio-grid">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                <span>Uskoro</span>
+                <p>Radimo na pripremi naših projekata i referenci za objavu.</p>
+            </div>
+            <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                <span>Nova prezentacija radova</span>
+                <p>Uskoro ćete moći pogledati odabrane projekte i web rješenja.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" id="o-nama-anchor">
+        <h2 style="font-size: 2.5rem; margin-bottom: 10px;" data-aos="fade-up">Naš Tim</h2>
+        <p style="color: var(--grey);" data-aos="fade-up">Ljudi koji stoje iza Wellas-a</p>
+
+        <div class="team-grid">
+            <div class="member" data-aos="zoom-in" data-aos-delay="100">
+                <div class="portrait">
+                    <img src="images/vedad.png" alt="Vedad Velagić">
+                </div>
+                <h3>Vedad Velagić</h3>
+                <p class="highlight">Co-Founder & Developer</p>
+            </div>
+
+            <div class="member" data-aos="zoom-in" data-aos-delay="300">
+                <div class="portrait">
+                    <img src="images/tamer.jpg" alt="Tamer Velagić">
+                </div>
+                <h3>Tamer Velagić</h3>
+                <p class="highlight">Co-Founder & Developer</p>
+            </div>
+        </div>
+        <div style="margin-top: 50px;" data-aos="fade-up">
+            <a href="o-nama.html" class="cta-btn" style="font-size: 0.8rem;">VIŠE O NAMA</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <strong class="highlight">WELLAS</strong>. Sva prava pridržana.</p>
+        <p style="margin-top: 15px; font-family: monospace;">
+            <a href="kontakt.html" class="contact-link">Pošalji upit</a> | 
+            <a href="mailto:vedad@velagic.net" class="contact-link">vedad@velagic.net</a>
+        </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+            mirror: true,
+            offset: 120
+        });
+    </script>
+</body>
+</html>
