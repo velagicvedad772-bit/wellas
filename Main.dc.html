@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="utf-8">
+<title>Poster MOL – stehiometrijski odnosi</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Patrick+Hand&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fdfcf6}
+a{color:#1f2a33}a:hover{color:#000}
+.hl{padding:0 6px;border-radius:4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.box{border:2.5px solid #1f2a33;border-radius:255px 18px 225px 18px/18px 225px 18px 255px;background:#fff;box-sizing:border-box}
+.h2{font-family:Caveat,cursive;font-weight:700;font-size:34px;line-height:1;margin:0 0 8px 0;color:#1f2a33}
+.lab{font-family:Caveat,cursive;font-weight:700;font-size:24px;line-height:1;color:#1f2a33}
+.f{font-family:'Patrick Hand',cursive;font-size:17px;line-height:1.3;color:#1f2a33}
+.res{font-family:'Patrick Hand',cursive;font-size:19px;line-height:1.2;color:#1f2a33;padding:1px 7px;border-radius:5px;white-space:nowrap}
+table.t{border-collapse:collapse;width:100%;font-family:'Patrick Hand',cursive;font-size:16px;color:#1f2a33}
+table.t th{font-family:Caveat,cursive;font-size:22px;font-weight:700;text-align:left;border:2px solid #1f2a33;padding:4px 8px;background:#eef8bd}
+table.t td{border:2px solid #1f2a33;padding:4px 8px;vertical-align:top}
+table.t td.n{text-align:right;white-space:nowrap}
+.chk{display:inline-block;width:16px;height:16px;border:2px solid #1f2a33;border-radius:3px;vertical-align:-3px;margin-right:8px}
+</style>
+</helmet>
+<div style="width: 1123px; height: 1587px; box-sizing: border-box; padding: 40px 44px 36px 44px; background: #fdfcf6; display: flex; flex-direction: column; gap: 16px; font-family: 'Patrick Hand', cursive; color: #1f2a33; overflow: hidden">
+
+  <!-- ZAGLAVLJE -->
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 150px">
+    <svg width="130" height="130" viewBox="0 0 130 130" fill="none" stroke="#1f2a33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="65" y1="18" x2="65" y2="104"></line>
+      <line x1="22" y1="34" x2="108" y2="34"></line>
+      <path d="M22 34 L8 66 Q22 80 36 66 Z" fill="#c9b8f0"></path>
+      <path d="M108 34 L94 66 Q108 80 122 66 Z" fill="#e3f56a"></path>
+      <line x1="22" y1="34" x2="22" y2="20"></line><line x1="108" y1="34" x2="108" y2="20"></line>
+      <ellipse cx="65" cy="110" rx="34" ry="8" fill="#bfebd9"></ellipse>
+      <circle cx="65" cy="14" r="5" fill="#f8c8d8"></circle>
+    </svg>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; flex-grow: 1">
+      <div style="font-family: Caveat, cursive; font-weight: 700; font-size: 112px; line-height: 0.9; letter-spacing: 6px; -webkit-text-stroke: 2px #1f2a33; color: #e3f56a; text-shadow: 3px 3px 0 #1f2a33">MOL</div>
+      <div style="font-family: Caveat, cursive; font-weight: 600; font-size: 30px; line-height: 1; color: #1f2a33">Hemija · Stehiometrijski odnosi · mol na četiri načina</div>
+      <div class="f" style="font-size: 16px; color: #1f2a33; text-align: center">Relativna molekulska masa, broj čestica, molarna masa i njihova veza — zadaci riješeni korak po korak.</div>
+    </div>
+    <svg width="150" height="140" viewBox="0 0 150 140" fill="none" stroke="#1f2a33" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M60 8 H90 V40 L128 118 Q134 130 120 130 H30 Q16 130 22 118 L60 40 Z" fill="#ffffff"></path>
+      <path d="M40 84 L118 84 L128 118 Q134 130 120 130 H30 Q16 130 22 118 Z" fill="#c9b8f0" stroke="none"></path>
+      <path d="M40 84 L118 84 L128 118 Q134 130 120 130 H30 Q16 130 22 118 Z" fill="none"></path>
+      <line x1="58" y1="8" x2="92" y2="8"></line>
+      <circle cx="70" cy="104" r="4" fill="#fff"></circle><circle cx="96" cy="112" r="3" fill="#fff"></circle><circle cx="84" cy="96" r="2.5" fill="#fff"></circle>
+    </svg>
+  </div>
+
+  <!-- 1. TRI VEZE + Ar TABLICA -->
+  <div style="display: flex; gap: 14px; height: 236px">
+    <div class="box" style="flex: 1 1 0; padding: 12px 16px; display: flex; flex-direction: column; gap: 6px">
+      <div class="h2">1. Prije računanja — <span class="hl" style="background: #e3f56a">tri veze</span> koje rješavaju sve zadatke</div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px">
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div class="lab">1 · Relativna molekulska masa</div>
+          <div class="res" style="background: #eef8bd; font-size: 24px; align-self: flex-start">Mᵣ = Σ Aᵣ</div>
+          <div class="f" style="font-size: 15px">Zbroj relativnih atomskih masa svih atoma u formuli. Bez jedinice — omjer prema 1/12 mase atoma ¹²C.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div class="lab">2 · Množina i broj čestica</div>
+          <div class="res" style="background: #e6ddfa; font-size: 24px; align-self: flex-start">N = n · Nᴀ</div>
+          <div class="f" style="font-size: 15px">n u mol, N kao broj jedinki, Nᴀ ≈ 6,022 × 10²³ mol⁻¹. Obrnuto: n = N / Nᴀ.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px">
+          <div class="lab">3 · Molarna masa</div>
+          <div class="res" style="background: #d7f3e8; font-size: 24px; align-self: flex-start">M = m / n</div>
+          <div class="f" style="font-size: 15px">M u g mol⁻¹ brojčano jednaka Mᵣ. Izvedeno: m = n · M i n = m / M.</div>
+        </div>
+      </div>
+    </div>
+    <div class="box" style="width: 300px; flex-shrink: 0; padding: 12px 14px; background: #fff8fb; display: flex; flex-direction: column; gap: 6px">
+      <div class="lab" style="font-size: 26px">Aᵣ vrijednosti koje koristimo</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px">
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">1</div><div class="lab" style="font-size: 22px">H</div><div class="f" style="font-size: 14px; line-height: 1">1,008</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">6</div><div class="lab" style="font-size: 22px">C</div><div class="f" style="font-size: 14px; line-height: 1">12,01</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">7</div><div class="lab" style="font-size: 22px">N</div><div class="f" style="font-size: 14px; line-height: 1">14,01</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">8</div><div class="lab" style="font-size: 22px">O</div><div class="f" style="font-size: 14px; line-height: 1">16,00</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">11</div><div class="lab" style="font-size: 22px">Na</div><div class="f" style="font-size: 14px; line-height: 1">22,99</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">16</div><div class="lab" style="font-size: 22px">S</div><div class="f" style="font-size: 14px; line-height: 1">32,06</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">17</div><div class="lab" style="font-size: 22px">Cl</div><div class="f" style="font-size: 14px; line-height: 1">35,45</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">20</div><div class="lab" style="font-size: 22px">Ca</div><div class="f" style="font-size: 14px; line-height: 1">40,08</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">26</div><div class="lab" style="font-size: 22px">Fe</div><div class="f" style="font-size: 14px; line-height: 1">55,85</div></div>
+        <div style="border: 2px solid #1f2a33; border-radius: 6px; padding: 3px 4px; text-align: center; background: #fff"><div class="f" style="font-size: 12px; line-height: 1">29</div><div class="lab" style="font-size: 22px">Cu</div><div class="f" style="font-size: 14px; line-height: 1">63,55</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZADATAK 2 -->
+  <div class="box" style="padding: 12px 16px; display: flex; flex-direction: column; gap: 8px; height: 228px">
+    <div class="h2">Zadatak 2 · <span class="hl" style="background: #c9b8f0">Izračunaj Mᵣ</span> — relativna molekulska masa hidrata i soli</div>
+    <div style="display: flex; gap: 14px">
+      <table class="t" style="flex: 1 1 0; width: auto">
+        <thead><tr><th style="width: 190px">Tvar</th><th>Postupak</th><th style="width: 80px; text-align: right">Mᵣ</th></tr></thead>
+        <tbody>
+          <tr><td>(NH₄)₂SO₄</td><td>2·14,01 + 8·1,008 + 32,06 + 4·16,00</td><td class="n" style="background: #eef8bd">132,14</td></tr>
+          <tr><td>CaCl₂·2H₂O</td><td>40,08 + 2·35,45 + 2·18,02</td><td class="n" style="background: #eef8bd">147,01</td></tr>
+          <tr><td>(NH₄)₂Fe(SO₄)₂·6H₂O</td><td>2·18,04 + 55,85 + 2·96,06 + 6·18,02</td><td class="n" style="background: #eef8bd">392,14</td></tr>
+        </tbody>
+      </table>
+      <div style="width: 390px; flex-shrink: 0; display: flex; flex-direction: column; gap: 8px">
+        <div style="background: #f3effc; border-radius: 10px; padding: 6px 10px"><div class="lab" style="font-size: 22px">Kako brojimo atome</div><div class="f" style="font-size: 14px">Indeks izvan zagrade množi sve unutra: (NH₄)₂ = 2 N i 8 H. Tačka u hidratu znači „plus“: ·6H₂O dodaje šest molekula vode.</div></div>
+        <div style="background: #fff3f7; border-radius: 10px; padding: 6px 10px"><div class="lab" style="font-size: 22px">Zašto uz Aᵣ i Mᵣ nema jedinice?</div><div class="f" style="font-size: 14px">Jer su to omjeri — masa atoma ili molekule podijeljena s 1/12 mase atoma ¹²C. Omjer dviju masa je čisti broj.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZADATAK 3 + ZADATAK 5 -->
+  <div style="display: flex; gap: 14px; height: 420px">
+    <div class="box" style="flex: 1 1 0; padding: 12px 16px; display: flex; flex-direction: column; gap: 6px">
+      <div class="h2">Zadatak 3 · <span class="hl" style="background: #bfebd9">Od mola do čestica</span> — množina puta Avogadrova konstanta</div>
+      <div class="f">a) Koliko molekula sadrži 1 mol H₂O?<br>N = 1 mol · Nᴀ = <span class="res" style="background: #d7f3e8">6,022 × 10²³</span></div>
+      <div class="f">b) Koliko molekula sadrži 0,50 mol CO₂?<br>N = 0,50 · 6,022 × 10²³ = <span class="res" style="background: #d7f3e8">3,011 × 10²³</span></div>
+      <div class="f">c) Koliko atoma sadrži 2,00 mol Cu?<br>N = 2,00 · 6,022 × 10²³ = <span class="res" style="background: #d7f3e8">1,204 × 10²⁴</span></div>
+      <div class="f">d) Množina uzorka s 3,011 × 10²³ molekula O₂?<br>n = N / Nᴀ = 3,011 × 10²³ / 6,022 × 10²³ = <span class="res" style="background: #d7f3e8">0,500 mol</span></div>
+      <div class="f" style="margin-top: 2px">e) 25 g kalcijum karbonata CaCO₃ — množina tvari<br>M = 40,08 + 12,01 + 3·16,00 = 100,09 g/mol<br>n = m / M = 25 g / 100,09 g/mol = <span class="res" style="background: #d7f3e8">0,250 mol</span></div>
+      <div class="f">f-a) 72,99 g željezo(III) hlorida FeCl₃ — broj čestica<br>M = 55,85 + 3·35,45 = 162,20 g/mol · n = 72,99 / 162,20 = 0,450 mol<br>N = n · Nᴀ = 0,450 · 6,022 × 10²³ = <span class="res" style="background: #d7f3e8">2,71 × 10²³</span></div>
+      <div class="f">f-b) 0,200 mol natrijum hlorata NaClO₃ — množina je zadana, masa nije potrebna<br>N = n · Nᴀ = 0,200 · 6,022 × 10²³ = <span class="res" style="background: #d7f3e8">1,204 × 10²³</span></div>
+    </div>
+    <div class="box" style="width: 440px; flex-shrink: 0; padding: 12px 16px; display: flex; flex-direction: column; gap: 8px">
+      <div class="h2">Zadatak 5 · <span class="hl" style="background: #f8c8d8">Masa, množina i molarna masa</span></div>
+      <div class="f" style="font-family: Caveat, cursive; font-size: 24px; font-weight: 600; margin-top: -6px">Kad mol stane na vagu</div>
+      <div class="f">a) Masa 1,00 mol O₂<br>M(O₂) = 2·16,00 = 32,00 g/mol · m = n·M = <span class="res" style="background: #fde0ea">32,00 g</span></div>
+      <div class="f">b) Masa 0,600 mol etanske kiseline C₂H₄O₂<br>M = 60,05 g/mol · m = 0,600 · 60,05 = <span class="res" style="background: #fde0ea">36,03 g</span></div>
+      <div class="f">c) Množina u 9,8 g sulfatne kiseline H₂SO₄<br>M = 98,08 g/mol · n = 9,8 / 98,08 = <span class="res" style="background: #fde0ea">0,10 mol</span></div>
+      <div class="f">d) Broj molekula u 18,0 g H₂O<br>n = 18,0 / 18,02 ≈ 1,00 mol · N = n·Nᴀ ≈ <span class="res" style="background: #fde0ea">6,02 × 10²³</span></div>
+      <div style="margin-top: auto; background: #eef8bd; border-radius: 10px; padding: 6px 10px" class="f">Jedan mol bilo koje tvari sadrži 6,022 × 10²³ jedinki. Mijenja se samo masa.</div>
+    </div>
+  </div>
+
+  <!-- ZADATAK 6 + PROVJERI + IZLAZNA KARTICA -->
+  <div style="display: flex; gap: 14px; height: 400px">
+    <div style="flex: 1 1 0; display: flex; flex-direction: column; gap: 14px">
+      <div class="box" style="padding: 12px 16px; display: flex; flex-direction: column; gap: 6px">
+        <div class="h2">Zadatak 6 · <span class="hl" style="background: #e3f56a">Poveži tri razine</span> — jedan podatak otključava ostala dva</div>
+        <table class="t">
+          <thead><tr><th>Tvar</th><th style="text-align: right">n / mol</th><th style="text-align: right">m / g</th><th style="text-align: right">N / broj jedinki</th><th>Postupak</th></tr></thead>
+          <tbody>
+            <tr><td>H₂O</td><td class="n">1,00</td><td class="n" style="background: #fde9c9">18,02</td><td class="n" style="background: #fde9c9">6,022 × 10²³</td><td style="font-size: 14px">zadano n: m = 1,00 · 18,02 = 18,02 g; N = 1,00 · Nᴀ</td></tr>
+            <tr><td>NaCl</td><td class="n" style="background: #fde9c9">1,00</td><td class="n">58,44</td><td class="n" style="background: #fde9c9">6,022 × 10²³</td><td style="font-size: 14px">zadano m: n = 58,44 / 58,44 = 1,00 mol; N = 1,00 · Nᴀ</td></tr>
+            <tr><td>O₂</td><td class="n" style="background: #fde9c9">2,00</td><td class="n" style="background: #fde9c9">64,00</td><td class="n">1,2044 × 10²⁴</td><td style="font-size: 14px">zadano N: n = 1,2044 × 10²⁴ / Nᴀ = 2,00 mol; m = 2,00 · 32,00</td></tr>
+          </tbody>
+        </table>
+        <div class="f" style="font-size: 13px">narančasto = izračunato</div>
+      </div>
+      <div class="box" style="padding: 10px 16px; display: flex; flex-direction: column; gap: 4px; flex-grow: 1">
+        <div class="h2" style="font-size: 30px">Provjeri razumijevanje — tačno (T) ili netačno (N)?</div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px">
+          <div class="f" style="font-size: 14px"><span class="res" style="background: #fde0ea; font-size: 18px">N</span> Mᵣ ima jedinicu g mol⁻¹ — Mᵣ je omjer bez jedinice; g mol⁻¹ pripada molarnoj masi M.</div>
+          <div class="f" style="font-size: 14px"><span class="res" style="background: #d7f3e8; font-size: 18px">T</span> M(H₂O) ≈ Mᵣ(H₂O) brojčano — isti broj 18,02, ali različite veličine i jedinice.</div>
+          <div class="f" style="font-size: 14px"><span class="res" style="background: #d7f3e8; font-size: 18px">T</span> Dvostruko n → dvostruko m — m = n · M, a M je za istu tvar stalna.</div>
+        </div>
+      </div>
+    </div>
+    <div class="box" style="width: 400px; flex-shrink: 0; padding: 12px 16px; background: #f7f3ff; display: flex; flex-direction: column; gap: 7px; border-style: dashed">
+      <div class="h2" style="text-align: center">~ Izlazna kartica ~</div>
+      <div class="f" style="font-size: 15px">1. Objasni jednom rečenicom zašto Aᵣ i Mᵣ nemaju jedinicu.<div style="border-bottom: 1.5px solid #1f2a33; height: 20px"></div></div>
+      <div class="f" style="font-size: 15px">2. Napiši razliku između Mᵣ i M i jedinicu u kojoj se izražava M.<div style="border-bottom: 1.5px solid #1f2a33; height: 20px"></div></div>
+      <div class="f" style="font-size: 15px">3. Koliko jedinki sadrži 1 mol bilo koje tvari? Koja se veličina mijenja od tvari do tvari?<div style="border-bottom: 1.5px solid #1f2a33; height: 20px"></div></div>
+      <div class="f" style="font-size: 15px">4. Izračunaj množinu u 9,8 g H₂SO₄ (M = 98,08 g/mol).<div style="border-bottom: 1.5px solid #1f2a33; height: 20px"></div></div>
+      <div class="f" style="font-size: 15px; margin-top: 2px">5. Označi:<br><span class="chk"></span>mogu samostalno<br><span class="chk"></span>treba mi još jedan primjer<br><span class="chk"></span>potrebna mi je pomoć</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1123,"height":1587}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
